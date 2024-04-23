@@ -5,8 +5,29 @@
         <title>Projects</title>
 
         <style>
-            body { font-family:'Lucida Console', monospace; text-align: justify; padding-left: 20vw; font-size: 18px; width: 60vw; };
+            body { 
+                font-family:'Lucida Console', monospace; 
+                text-align: justify; padding-left: 20vw; 
+                font-size: 18px; width: 60vw;
+            };
+
+            .collapsible:default {
+                color: blue; /* Default text color */
+                text-decoration: underline; /* Default text decoration */
+                cursor: pointer;
+            }
+
+            .active, .collapsible:hover {
+            }
+
+            /* Style the collapsible content. Note: hidden by default */
+            .content {
+                padding: 0 18px;
+                display: none;
+                overflow: hidden;
+            }
         </style>
+
     </head>
 
     <body class="box" >
@@ -21,7 +42,47 @@
             <li>
                 <h3>engineering projects</h3>
                 <ul>
-                    <li>card dealer robot</li>
+                    <li>
+                        <a href="#" class="collapsible">card dealer robot</a>
+                        <div class="content">
+                            <br>
+                            <div style="width: 100%;">
+                                <div style="float:left; width: 50%">
+                                    <iframe width="100%" height="410" 
+                                                        src="https://www.youtube.com/embed/o8-NvMPpurU"
+                                                        title="" frameBorder="0"   allow="accelerometer; 
+                                                                              autoplay; clipboard-write;
+                                                                              encrypted-media; gyroscope; 
+                                                                              picture-in-picture; web-share"  
+                                                                                   allowFullScreen>
+                                    </iframe>
+                                </div>
+                                <div style="float:right; text-align:justify; width: 45%; padding-left:5%;">
+                                    A third semester engineering project. 
+                                    We were free to do whatever we wanted as long as 
+                                    we were detecting cards and recognising hand gestures.
+
+                                    We decided to build a robot as to make the game more interactive.
+
+                                    <br>
+                                    <br>
+
+                                    The robot can play blackjack and present the game on the screen. 
+                                    It's quite easy to add new games but we did not have time. 
+                                    The robot gives the different players a card. 
+                                    It reads in which card was dispensed using a small camera.
+                                    <br><br>
+                                    Then it asks the player for a bet. 
+                                    The player enters the bet and makes the ok sign (👌). 
+                                    It repeats this for all the players. 
+                                    Then the game starts and the players can do different things 
+                                    based on their hand symbol.
+
+                                </div>
+                            </div>
+                            <div style="clear:both"></div>
+                        </div>                    
+                    </li>
                 </ul>
             </li>
             <br>
@@ -29,11 +90,58 @@
             <li>
                 <h3>personal projects</h3>
                 <ul>
-                    <li>powerpedal                      </li>
-                    <li>music box                       </li>
+                    <li>
+                        <a href="#" class="collapsible">powerpedal</a>
+                        <div class="content">
+                            <br>
+                            <div style="width: 100%;">
+                                <div style="float:left; width: 50%">
+                                    <iframe width="100%" height="410" 
+                                                        src="https://www.youtube.com/embed/6Eus0abWdFg" 
+                                                        title="" frameBorder="0"   allow="accelerometer; 
+                                                                              autoplay; clipboard-write;
+                                                                              encrypted-media; gyroscope; 
+                                                                              picture-in-picture; web-share"  
+                                                                                   allowFullScreen>
+                                    </iframe>
+                                </div>
+                                <div style="float:right; text-align:justify; width: 45%; padding-left:5%;">
+                                    Powerpedal was a one year project in the last year of highschool. 
+                                    We were with four people. The purpose of the project was to make 
+                                    a small business called a "mini-onderneming".
+                                    We made a device to charge your phone while cycling.
+                                    At a normal speed(20km/h) it would charge 1% per 2 minutes.
+                                    We sold 45 of these at a price of €25. 
+                                    <br>
+                                    <br>
+                                    I made this promotional video was for a competion. We got second in Belgium.
+                                    Other videos can be found on the instagram page: powerpedal2021.
+                                </div>
+                            </div>
+                            <div style="clear:both"></div>
+                        </div>                    
+                    </li>
+                    <br>
                     <li>CURRENT: Vulkan graphics engine </li>
                 </ul>
             </li>
         </ul>
     </body>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
 </html>
