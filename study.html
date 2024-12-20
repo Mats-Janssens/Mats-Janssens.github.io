@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projects</title>
+
+        <style>
+            body { 
+                font-family:'Lucida Console', monospace; 
+                text-align: justify; padding-left: 20vw; 
+                font-size: 18px; width: 60vw;
+            };
+
+            .collapsible:default {
+                color: blue; /* Default text color */
+                text-decoration: underline; /* Default text decoration */
+                cursor: pointer;
+            }
+
+            .active, .collapsible:hover {
+            }
+
+            /* Style the collapsible content. Note: hidden by default */
+            .content {
+                padding: 0 18px;
+                display: none;
+                overflow: hidden;
+            }
+        </style>
+
+    </head>
+
+    <body class="box" >
+        <header style="font-size: 26px;" class="links">
+            <a href="index.html">home</a>
+        </header>
+
+        <hr>
+        <h2>projects</h2>
+        <ul>
+            <li>
+                <h3>SEMESTER 5</h3>
+                <ul>
+                    <li>
+                        <a href="#" class="collapsible">EEA</a>
+                        <div class="content">
+			  - YEY
+                        </div>                    
+                    </li>
+                </ul>
+            </li>
+            <br>
+
+            <li>
+            </li>
+        </ul>
+    </body>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+</html>
